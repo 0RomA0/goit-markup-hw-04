@@ -74,16 +74,33 @@ align-items: center;
 gap: 40px;
 }
 
+
 .link-nav {
+    position: relative;
     display: block;
     align-items: center;
     padding: 24px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.02em;
     color: #2e2f42;
 }
+.link-nav.active::after {
+    content: " ";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    
+
+    }
+    
+
 
 .link-nav:hover,
 .link-nav:focus  {
@@ -120,12 +137,20 @@ gap: 40px;
 
 
 .business {
+    min-width: 1440px;
     padding: 188px 0;
     background-color: #2e2f42;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    background-image: url("../images/people-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
 }
+
+
 
 .title-business {
     display: flex;
@@ -165,6 +190,24 @@ gap: 40px;
 
 .benefits {
     padding: 120px 0
+}
+
+.box-svg-benefits {
+    margin-bottom: 8px;
+    gap: 24px;
+    position: relative;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    height: 112px;
+    background-color: #f4f4fd;
+}
+
+.benefits-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -263,6 +306,31 @@ gap: 40px;
     color: #434455;
 }
 
+.box-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+.list-team-icon {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.link-team-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+}
+.team-icon {
+    
+    fill: #fff;
+}
+
 .portfolio {
     display: flex;
     padding-top: 120px;
@@ -343,4 +411,45 @@ gap: 40px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+}
+
+ .footer-container {
+display: block;
+align-items: center;
+justify-content: center;
+}
+
+.box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 120px;
+
+}
+
+.article-icon-footer {
+display: flex;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #fff;
+}
+.footer-list-icon {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.link-footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+}
+.footer-icon {
+    fill: #fff;
 }
